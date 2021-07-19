@@ -10,9 +10,20 @@ namespace trabalho_em_duplaRodolfo
     {
         public void mostrarpj()
         {
-            foreach (var item in )
-            {
 
+            Console.Clear();
+            if (Menu.Pj.Count <= 0)
+            {
+                Console.WriteLine("Lista de produtos vazia!");
+            }
+            else
+            {
+                Console.WriteLine("-------------Lista de produtos cadastrados-------------");
+                foreach (var item in Menu.Pj)
+                {
+                    Console.WriteLine("---------------------------------------------------");
+                    Console.WriteLine($"Nome: {item.Nome}\nCnpj: {item.Cnpj}\nIE: {item.Ie}\nEndereço: {item.Endereco}");
+                }
             }
         }
     }

@@ -8,6 +8,7 @@ namespace trabalho_em_duplaRodolfo
 {
     class Menu
     {
+        MostrarListapj mostrarPJ = new MostrarListapj();
         PessoaFisica CadastroPF = new PessoaFisica();
         PessoaJuridica CadastroPJ = new PessoaJuridica();
         public static List<PessoaFisica> Pf = new List<PessoaFisica>();
@@ -28,11 +29,14 @@ namespace trabalho_em_duplaRodolfo
                     break;
                 case 1:
                     CadastroPJ.Cadastropj();
+                    Main();
                     break;
                 case 2:
 
                     break;
                 case 3:
+                    mostrarPJ.mostrarpj();
+                    Main();
                     break;
                 case 4:
                     break;
