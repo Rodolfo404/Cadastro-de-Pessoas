@@ -13,32 +13,33 @@ namespace trabalho_em_duplaRodolfo
         public string Ie { get; set; }
         public void Cadastropj()
         {
+
             string resp;
             do
 	        {
                 Console.Clear();
                 PessoaJuridica cadastro = new PessoaJuridica();
                 Console.WriteLine("Digite seu Nome: ");
-                cadastro.Nome = Console.ReadLine().Trim();
+                cadastro.Nome = Validacao.ValidaStringBranco();
                 Console.WriteLine("digite seu Cnpj:");
-                cadastro.Cnpj = Console.ReadLine().Trim();
+                cadastro.Cnpj = Validacao.ValidaStringBranco();
                 Console.WriteLine("digite seu IE: ");
-                cadastro.Ie = Console.ReadLine().Trim();
+                cadastro.Ie = Validacao.ValidaStringBranco();
                 Console.WriteLine("Data de criação da Empresa: ");
                 cadastro.DataNascimento = Convert.ToDateTime(Console.ReadLine());
                 Console.WriteLine("---Cadastro de endereço---");
                 Console.WriteLine("Estado: ");
-                string estado = Console.ReadLine();
+                string estado = Validacao.ValidaStringBranco();
                 Console.WriteLine("Cidade:");
-                string cidade = Console.ReadLine();
+                string cidade = Validacao.ValidaStringBranco();
                 Console.WriteLine("Bairro: ");
-                string bairro = Console.ReadLine();
+                string bairro = Validacao.ValidaStringBranco();
                 Console.WriteLine("Rua: ");
-                string rua = Console.ReadLine();
+                string rua = Validacao.ValidaStringBranco();
                 Console.WriteLine("Número:");
-                int num = int.Parse(Console.ReadLine());
+                int num = Validacao.ValidaInt();
                 Console.WriteLine("Complemento: ");
-                string complemento = Console.ReadLine();
+                string complemento = Validacao.ValidaStringBranco();
                 cadastro.Endereco = new Endereco(estado, cidade, bairro, rua, num, complemento);
                 Menu.Pj.Add(cadastro);
                 resp = Console.ReadLine().ToLower();
