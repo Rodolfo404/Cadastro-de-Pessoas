@@ -29,7 +29,7 @@ namespace trabalho_em_duplaRodolfo
                 Console.Write("Data de criação da Empresa(dd/mm/aa): ");
                 cadastro.DataNascimento = Validacao.ValidaData();
                 Console.WriteLine("---Cadastro de endereço---");
-                Console.Write("Estado: ");
+                Console.Write("\nEstado: ");
                 string estado = Validacao.ValidaStringBranco();
                 Console.Write("Cidade:");
                 string cidade = Validacao.ValidaStringBranco();
