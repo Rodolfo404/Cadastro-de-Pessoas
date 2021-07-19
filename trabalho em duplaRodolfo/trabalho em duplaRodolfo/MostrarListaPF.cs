@@ -22,7 +22,8 @@ namespace trabalho_em_duplaRodolfo
                 Console.WriteLine("\n------------- Lista de Pessoas Físicas -------------");
                 foreach (var item in Menu.Pf)
                 {
-                    Console.WriteLine("---------------------------------------------------");
+                    Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("---------------------------------------------------");
+                    Console.ResetColor();
                     Console.WriteLine($"Nome: {item.Nome}\nData de nascimento: {item.DataNascimento}\nCpf: {item.Cpf}\nRg: {item.Rg}\n---------Endereço--------{item.Endereco}");
                 }
             }

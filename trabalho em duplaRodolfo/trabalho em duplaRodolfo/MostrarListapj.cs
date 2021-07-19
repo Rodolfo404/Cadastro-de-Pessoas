@@ -21,7 +21,8 @@ namespace trabalho_em_duplaRodolfo
                 Console.WriteLine("\n------------- Lista de Pessoa Jurídica -------------");
                 foreach (var item in Menu.Pj)
                 {
-                    Console.WriteLine("---------------------------------------------------");
+                    Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("---------------------------------------------------");
+                    Console.ResetColor();
                     Console.WriteLine($"Nome: {item.Nome}\nCnpj: {item.Cnpj}\nIE: {item.Ie}\n---------Endereço-------- {item.Endereco}");
                 }
             }

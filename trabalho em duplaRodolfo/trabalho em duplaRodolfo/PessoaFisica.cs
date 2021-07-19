@@ -45,8 +45,10 @@ namespace trabalho_em_duplaRodolfo
                 string complemento = Validacao.ValidaStringBranco();
                 cadastro.Endereco =new Endereco(estado, cidade, bairro, rua, num, complemento);
                 Menu.Pf.Add(cadastro);
+                Console.WriteLine("Deseja realizar mais um cadastro? S/N");
                 resp = Console.ReadLine().ToLower();
             } while (resp =="s");
+            Console.Clear();
         }
     }
 }

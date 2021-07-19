@@ -39,6 +39,7 @@ namespace trabalho_em_duplaRodolfo
                 case 3:
                     mostrarPJ.mostrarpj();
                     Console.ReadLine();
+                    Console.Clear();
                     Main();
                     break;
                 case 4:
