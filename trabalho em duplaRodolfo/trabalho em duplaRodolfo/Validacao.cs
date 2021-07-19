@@ -14,7 +14,7 @@ namespace trabalho_em_duplaRodolfo
                 string dado = System.Console.ReadLine().Trim();
                 while (String.IsNullOrEmpty(dado))
                 {
-                    System.Console.WriteLine("Vazio: digite algo valido");
+                    System.Console.WriteLine("Vazio: digite um valor valido");
                     dado = System.Console.ReadLine().Trim();
                 }
                 return dado;
