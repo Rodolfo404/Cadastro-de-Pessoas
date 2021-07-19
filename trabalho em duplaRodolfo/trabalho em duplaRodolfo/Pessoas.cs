@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace trabalho_em_duplaRodolfo
 {
-    class Program
+    class Pessoas
     {
-        static void Main(string[] args)
-        {
-
-        }
+        
+        public string Nome { get; set; }
+        public DateTime  DataNascimento{ get; set; }
+       
     }
 }
