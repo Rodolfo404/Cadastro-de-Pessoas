@@ -32,13 +32,15 @@ namespace trabalho_em_duplaRodolfo
                     Main();
                     break;
                 case 2:
-
+                    CadastroPF.CadastroPf();
+                    Main();
                     break;
                 case 3:
                     mostrarPJ.mostrarpj();
                     Main();
                     break;
                 case 4:
+
                     break;
                 default:
                     break;
