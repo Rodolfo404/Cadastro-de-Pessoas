@@ -8,6 +8,7 @@ namespace trabalho_em_duplaRodolfo
 {
     class Menu
     {
+        MostrarListaPF mostrarpf = new MostrarListaPF();
         MostrarListapj mostrarPJ = new MostrarListapj();
         PessoaFisica CadastroPF = new PessoaFisica();
         PessoaJuridica CadastroPJ = new PessoaJuridica();
@@ -22,7 +23,7 @@ namespace trabalho_em_duplaRodolfo
         }
         public void opcoes()
         {
-            int resposta = int.Parse(Console.ReadLine());
+            int resposta = Validacao.ValidaInt();
             switch (resposta)
             {
                 case 0:
@@ -37,12 +38,21 @@ namespace trabalho_em_duplaRodolfo
                     break;
                 case 3:
                     mostrarPJ.mostrarpj();
+                    Console.ReadLine();
                     Main();
                     break;
                 case 4:
-
+                    mostrarpf.mostrarpf();
+                    Console.ReadLine();
+                    Console.Clear();
+                    Main();
                     break;
                 default:
+                    Console.Clear();
+                    Console.WriteLine("\nOpção inválida!\nPressione qualquer tecla para voltar ao menu!");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Main();
                     break;
             }
         }

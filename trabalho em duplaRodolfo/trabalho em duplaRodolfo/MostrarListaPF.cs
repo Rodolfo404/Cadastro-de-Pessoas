@@ -15,15 +15,15 @@ namespace trabalho_em_duplaRodolfo
             Console.Clear();
             if (Menu.Pf.Count <= 0)
             {
-                Console.WriteLine("Lista vazia!");
+                Console.WriteLine("\nLista de Pessoas Físicas vazia!");
             }
             else
             {
-                Console.WriteLine("-------------Lista de Pessoas Físicas cadastrados-------------");
+                Console.WriteLine("\n------------- Lista de Pessoas Físicas -------------");
                 foreach (var item in Menu.Pf)
                 {
                     Console.WriteLine("---------------------------------------------------");
-                    Console.WriteLine($"Nome: {item.Nome}\nData de nascimento: {item.DataNascimento}\nCpf: {item.Cpf}\nRg: {item.Rg}\nEndereço: {item.Endereco}");
+                    Console.WriteLine($"Nome: {item.Nome}\nData de nascimento: {item.DataNascimento}\nCpf: {item.Cpf}\nRg: {item.Rg}\n---------Endereço--------{item.Endereco}");
                 }
             }
         }

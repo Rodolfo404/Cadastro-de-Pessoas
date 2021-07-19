@@ -18,6 +18,7 @@ namespace trabalho_em_duplaRodolfo
             do
 	        {
                 Console.Clear();
+                Console.WriteLine("-------Cadastrando Pessoa Juridica-------");
                 PessoaJuridica cadastro = new PessoaJuridica();
                 Console.WriteLine("Digite seu Nome: ");
                 cadastro.Nome = Validacao.ValidaStringBranco();

@@ -14,15 +14,15 @@ namespace trabalho_em_duplaRodolfo
             Console.Clear();
             if (Menu.Pj.Count <= 0)
             {
-                Console.WriteLine("Lista de produtos vazia!");
+                Console.WriteLine("\nLista de Pessoas Jurídicas vazia!");
             }
             else
             {
-                Console.WriteLine("-------------Lista de produtos cadastrados-------------");
+                Console.WriteLine("\n------------- Lista de Pessoa Jurídica -------------");
                 foreach (var item in Menu.Pj)
                 {
                     Console.WriteLine("---------------------------------------------------");
-                    Console.WriteLine($"Nome: {item.Nome}\nCnpj: {item.Cnpj}\nIE: {item.Ie}\nEndereço: {item.Endereco}");
+                    Console.WriteLine($"Nome: {item.Nome}\nCnpj: {item.Cnpj}\nIE: {item.Ie}\n---------Endereço-------- {item.Endereco}");
                 }
             }
         }
