@@ -38,5 +38,21 @@ namespace trabalho_em_duplaRodolfo
             } while(true);
         }
 
+        public static DateTime ValidaData()
+        {
+            do
+            {
+                try
+                {
+                    DateTime dado = Convert.ToDateTime(Console.ReadLine());
+                    return dado;
+                }
+                catch
+                {
+                    System.Console.WriteLine("Data Invalida");
+                }
+            } while (true);
+        }
+
     }
 }

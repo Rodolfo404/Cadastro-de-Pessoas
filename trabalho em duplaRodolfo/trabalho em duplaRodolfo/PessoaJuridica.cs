@@ -25,8 +25,8 @@ namespace trabalho_em_duplaRodolfo
                 cadastro.Cnpj = Validacao.ValidaStringBranco();
                 Console.WriteLine("digite seu IE: ");
                 cadastro.Ie = Validacao.ValidaStringBranco();
-                Console.WriteLine("Data de criação da Empresa: ");
-                cadastro.DataNascimento = Convert.ToDateTime(Console.ReadLine());
+                Console.WriteLine("Data de criação da Empresa(dd/mm/aa): ");
+                cadastro.DataNascimento = Validacao.ValidaData();
                 Console.WriteLine("---Cadastro de endereço---");
                 Console.WriteLine("Estado: ");
                 string estado = Validacao.ValidaStringBranco();

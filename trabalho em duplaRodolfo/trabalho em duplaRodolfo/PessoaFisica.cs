@@ -28,8 +28,8 @@ namespace trabalho_em_duplaRodolfo
                 cadastro.Cpf = Validacao.ValidaStringBranco();
                 Console.WriteLine("RG: ");
                 cadastro.Rg = Validacao.ValidaStringBranco();
-                Console.WriteLine("Data de nascimento: ");
-                cadastro.DataNascimento = Convert.ToDateTime(Console.ReadLine());
+                Console.WriteLine("Data de nascimento(dd/mm/aa): ");
+                cadastro.DataNascimento = Validacao.ValidaData();
                 Console.WriteLine("-------Cadastro de endereço-------");
                 Console.WriteLine("Estado: ");
                 string estado = Validacao.ValidaStringBranco();
