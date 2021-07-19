@@ -53,6 +53,38 @@ namespace trabalho_em_duplaRodolfo
                 }
             } while (true);
         }
+        public static string CPF()
+        {
+            do
+            {
+                string cpf = Console.ReadLine();
+                if (cpf.Length == 11)
+                {
+                    return cpf;
+                }
+                else
+                {
+                    Console.WriteLine("Numero inválido!\nDigite novamente");
+                }
+            }
+            while (true);
+        }
+        public static string Rg()
+        {
+            do
+            {
+                string Rg = Console.ReadLine();
+                if (Rg.Length == 8)
+                {
+                    return Rg;
+                }
+                else
+                {
+                    Console.WriteLine("Numero inválido!\nDigite novamente");
+                }
+            }
+            while (true);
+        }
 
     }
 }

@@ -24,10 +24,10 @@ namespace trabalho_em_duplaRodolfo
                 Console.WriteLine("-------Cadastrando Pessoa Fisica-------");
                 Console.WriteLine("Nome: ");
                 cadastro.Nome = Validacao.ValidaStringBranco();
-                Console.WriteLine("CPF:");
-                cadastro.Cpf = Validacao.ValidaStringBranco();
-                Console.WriteLine("RG: ");
-                cadastro.Rg = Validacao.ValidaStringBranco();
+                Console.WriteLine("CPF com 11 Digitos:");
+                cadastro.Cpf = Validacao.CPF();
+                Console.WriteLine("RG com 8 Digitos: ");
+                cadastro.Rg = Validacao.Rg();
                 Console.WriteLine("Data de nascimento(dd/mm/aa): ");
                 cadastro.DataNascimento = Validacao.ValidaData();
                 Console.WriteLine("-------Cadastro de endereço-------");
