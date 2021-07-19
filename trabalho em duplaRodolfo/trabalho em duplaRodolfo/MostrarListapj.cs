@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace trabalho_em_duplaRodolfo
 {
-    class Program
+    class MostrarListapj
     {
-        static void Main(string[] args)
+        public void mostrarpj()
         {
-            new Menu().Main();
+            foreach (var item in )
+            {
+
+            }
         }
     }
 }
