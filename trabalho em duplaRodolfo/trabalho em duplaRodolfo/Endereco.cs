@@ -16,12 +16,17 @@ namespace trabalho_em_duplaRodolfo
         public string Complemento { get; set; }
         public Endereco(string estado, string cidade, string bairro, string rua, int num, string complemento)
         {
-            Estado = estado;
-            Cidade = cidade;
-            Bairro = bairro;
-            Rua = rua;
-            Num = num;
-            Complemento = complemento;
+            this.Estado = estado;
+            this.Cidade = cidade;
+            this.Bairro = bairro;
+            this.Rua = rua;
+            this.Num = num;
+            this.Complemento = complemento;
+        }
+        public override string ToString()
+        {
+            return $"Estado: {this.Estado}\nCidade: {this.Cidade}\n" +
+                $"Bairro: {this.Bairro}\nRua: {this.Rua}\nNúmero: {this.Num}\nComplemento: {this.Complemento}";
         }
     }
 }
