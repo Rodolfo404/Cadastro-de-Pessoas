@@ -8,11 +8,11 @@ namespace trabalho_em_duplaRodolfo
 {
     class PessoaJuridica : Pessoas
     {
+
         public string Cnpj { get; set; }
         public string Ie { get; set; }
         public void Cadastropj()
         {
-
             PessoaJuridica cadastro = new PessoaJuridica();
             Console.WriteLine("Digite seu Nome: ");
             cadastro.Nome = Console.ReadLine().Trim();
@@ -33,10 +33,8 @@ namespace trabalho_em_duplaRodolfo
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Complemento: ");
             string complemento = Console.ReadLine();
-            Endereco = new Endereco(estado,cidade,bairro,rua,num,complemento);
+            cadastro.Endereco = new Endereco(estado, cidade, bairro, rua, num, complemento);
             Menu.Pj.Add(cadastro);
         }
-        
-    
     }
 }
