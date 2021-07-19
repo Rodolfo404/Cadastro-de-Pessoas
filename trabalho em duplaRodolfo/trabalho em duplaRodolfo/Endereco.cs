@@ -25,7 +25,7 @@ namespace trabalho_em_duplaRodolfo
         }
         public override string ToString()
         {
-            return $"Estado: {this.Estado}\nCidade: {this.Cidade}\n" +
+            return $"\nEstado: {this.Estado}\nCidade: {this.Cidade}\n" +
                 $"Bairro: {this.Bairro}\nRua: {this.Rua}\nNúmero: {this.Num}\nComplemento: {this.Complemento}";
         }
     }

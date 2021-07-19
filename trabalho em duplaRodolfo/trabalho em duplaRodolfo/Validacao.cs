@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace trabalho_em_duplaRodolfo
 {
-    class Validacao
+    public class Validacao
     {
         public static string ValidaStringBranco()
         {
