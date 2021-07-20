@@ -10,23 +10,25 @@ namespace trabalho_em_duplaRodolfo
     {
         public string Cpf { get; set; }
         public string Rg { get; set; }
-        public int MyProperty { get; set; }
+        public int id { get; set; }
 
 
         public void CadastroPf()
         {
-
+            Validacao valida = new Validacao();
             string resp;
             do
 	        {
                 Console.Clear();
                 PessoaFisica cadastro = new PessoaFisica();
+
+                cadastro.ID = valida.IID(id);
                 Console.WriteLine("-------Cadastrando Pessoa Fisica-------");
                 Console.Write("Nome: ");
                 cadastro.Nome = Validacao.ValidaStringBranco();
                 Console.Write("CPF com 11 Digitos:");
                 cadastro.Cpf = Validacao.CPF();
-                Console.Write("RG com 8 Digitos: ");
+                Console.Write("RG com 7 Digitos: ");
                 cadastro.Rg = Validacao.Rg();
                 Console.Write("Data de nascimento(dd/mm/aa): ");
                 cadastro.DataNascimento = Validacao.ValidaData();

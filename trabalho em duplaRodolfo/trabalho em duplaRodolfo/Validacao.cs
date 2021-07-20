@@ -8,6 +8,21 @@ namespace trabalho_em_duplaRodolfo
 {
     public class Validacao
     {
+        public  int IID(int id)
+        {
+                if (Menu.contagem.Count <= 0)
+                {
+                    id = Menu.contagem.Count + 1;
+                    Menu.contagem.Add(id);
+                    return id;
+                }
+                else
+                {
+                    id = Menu.contagem.Count + 1;
+                    Menu.contagem.Add(id);
+                    return id;
+                }
+        }
         public static string ValidaStringBranco()
         {
             {
@@ -20,7 +35,7 @@ namespace trabalho_em_duplaRodolfo
                 return dado;
             }
         }
-
+        
         public static int ValidaInt()
         {
             do
@@ -57,10 +72,18 @@ namespace trabalho_em_duplaRodolfo
         {
             do
             {
-                string cpf = Console.ReadLine();
+                string cpf = ValidaStringBranco();
                 if (cpf.Length == 11)
                 {
-                    return cpf;
+                    try
+                    {
+                        return Convert.ToUInt64(cpf).ToString(@"000\.000\.000\-00");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("coloque um numero besta");
+                    }
+                    
                 }
                 else
                 {
@@ -74,9 +97,16 @@ namespace trabalho_em_duplaRodolfo
             do
             {
                 string Rg = Console.ReadLine();
-                if (Rg.Length == 8)
+                if (Rg.Length == 7)
                 {
-                    return Rg;
+                    try
+                    {
+                        return Convert.ToUInt64(Rg).ToString(@"0\.000\-000");
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("coloque um numero besta");
+                    }
                 }
                 else
                 {
@@ -85,6 +115,23 @@ namespace trabalho_em_duplaRodolfo
             }
             while (true);
         }
-
+        public void Remove()
+        {
+            Console.Clear();
+            new MostrarListaPF().mostrarpf();
+            Console.Write("digite um Id que queira deletar:");
+            int id = int.Parse(Console.ReadLine());
+            foreach (var item in Menu.Pf)
+            {
+                if (item.ID.Equals(id))
+                {
+                    Menu.Pf.Remove (item);
+                    break;
+                }
+            }
+            Console.WriteLine("apagado");
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }

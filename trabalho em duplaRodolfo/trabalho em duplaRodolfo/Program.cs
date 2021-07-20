@@ -10,7 +10,7 @@ namespace trabalho_em_duplaRodolfo
     {
         static void Main(string[] args)
         {
-            new Menu().Main();
+            new Menu().opcoes();
         }
     }
 }
