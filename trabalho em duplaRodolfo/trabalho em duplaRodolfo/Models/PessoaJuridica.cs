@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trabalho_em_duplaRodolfo
+namespace trabalho_em_duplaRodolfo.Models
 {
     class PessoaJuridica : Pessoas
     {
 
         public string Cnpj { get; set; }
         public string Ie { get; set; }
-        public void Cadastropj()
-        {
 
+        public PessoaJuridica()
+        {
+            this.createOperation = Create;
+            this.readOperation = Read;
+        }
+        public void Create()
+        {
             string resp;
             do
 	        {
@@ -47,6 +52,29 @@ namespace trabalho_em_duplaRodolfo
                 resp = Console.ReadLine().ToLower();
             } while (resp == "s");
             Console.Clear();
+        }
+        public void Read()
+        {
+
+            Console.Clear();
+            if (Menu.Pj.Count <= 0)
+            {
+                Console.Clear();
+                Console.WriteLine("\nLista de Pessoas Jurídicas vazia!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n------------- Lista de Pessoa Jurídica -------------");
+                foreach (var item in Menu.Pj)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("---------------------------------------------------");
+                    Console.ResetColor();
+                    Console.WriteLine($"Nome: {item.Nome}\nCnpj: {item.Cnpj}\nIE: {item.Ie}\n---------Endereço-------- {item.Endereco}");
+                    Console.ReadLine();
+                }
+            }
         }
     }
 }

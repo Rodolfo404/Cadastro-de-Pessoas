@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trabalho_em_duplaRodolfo
+namespace trabalho_em_duplaRodolfo.Models
 {
-    class PessoaFisica : Pessoas
+    public class PessoaFisica : Pessoas
     {
         public string Cpf { get; set; }
         public string Rg { get; set; }
         public int id { get; set; }
 
+        public PessoaFisica()
+        {
+            this.createOperation = Create;
+            this.readOperation = Read;
+        }
 
-        public void CadastroPf()
+        public void Create()
         {
             Validacao valida = new Validacao();
             string resp;
@@ -51,6 +56,29 @@ namespace trabalho_em_duplaRodolfo
                 resp = Console.ReadLine().ToLower();
             } while (resp =="s");
             Console.Clear();
+        }
+
+        public void Read()
+        {
+
+            Console.Clear();
+            if (Menu.Pf.Count <= 0)
+            {
+                Console.WriteLine("\nLista de Pessoas Físicas vazia!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n------------- Lista de Pessoas Físicas -------------");
+                foreach (var item in Menu.Pf)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("---------------------------------------------------");
+                    Console.ResetColor();
+                    Console.WriteLine($"Id: {item.ID}\nNome: {item.Nome}\nData de nascimento: {item.DataNascimento}\nCpf: {item.Cpf}\nRg: {item.Rg}\n---------Endereço--------{item.Endereco}");
+                }
+                Console.ReadLine();
+            }
         }
     }
 }

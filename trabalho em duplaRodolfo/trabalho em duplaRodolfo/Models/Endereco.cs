@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trabalho_em_duplaRodolfo
+namespace trabalho_em_duplaRodolfo.Models
 {
-    class Endereco
+    public class Endereco
     {
         public string Estado { get; set; }
         public string Cidade { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using trabalho_em_duplaRodolfo.Models;
 
 namespace trabalho_em_duplaRodolfo
 {
@@ -14,7 +15,7 @@ namespace trabalho_em_duplaRodolfo
         public void Main()
         {
             Console.WriteLine("-------Bem vindo-------");
-            Console.WriteLine("0 - Sair\n1 - Cadastro pessoa Juridica\n2 - Cadastro pessoa fisica\n3 - Mostrar lista de pessoas juridicas\n4 - Mostrar lista de pessoas Físicas\n5 - apagar pessoa fisica");
+            Console.WriteLine("0 - Sair\n1 - Cadastro pessoa Juridica\n2 - Cadastro pessoa fisica\n3 - Mostrar lista de pessoas juridicas\n4 - Mostrar lista de pessoas Físicas\n5 - Apagar pessoa fisica");
             Console.WriteLine("Escolha uma das opções acima: ");
             
         }
@@ -26,21 +27,23 @@ namespace trabalho_em_duplaRodolfo
                 Console.Clear();
                 Main();
                 resposta = Validacao.ValidaInt();
+                PessoaFisica pf = new PessoaFisica();
+                PessoaJuridica pj = new PessoaJuridica();
                 switch (resposta)
                 {
                     case 0:
                         break;
                     case 1:
-                        new PessoaJuridica().Cadastropj();
+                        pj.Create();
                         break;
                     case 2:
-                        new PessoaFisica().CadastroPf();
+                        pf.Create();
                         break;
                     case 3:
-                        new MostrarListapj().mostrarpj();
+                        pj.Read();
                         break;
                     case 4:
-                        new MostrarListaPF().mostrarpf();
+                        pf.Read();
                         break;
                     case 5:
                         new Validacao().Remove();

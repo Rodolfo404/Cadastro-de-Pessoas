@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trabalho_em_duplaRodolfo
+namespace trabalho_em_duplaRodolfo.Models
 {
-    class Pessoas
+    public class Pessoas : Crud
     {
         
         public Endereco Endereco { get; set; }

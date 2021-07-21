@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using trabalho_em_duplaRodolfo.Models;
 namespace trabalho_em_duplaRodolfo
 {
     public class Validacao
@@ -118,7 +118,7 @@ namespace trabalho_em_duplaRodolfo
         public void Remove()
         {
             Console.Clear();
-            new MostrarListaPF().mostrarpf();
+            new PessoaFisica().Read();
             Console.Write("digite um Id que queira deletar:");
             int id = int.Parse(Console.ReadLine());
             foreach (var item in Menu.Pf)
