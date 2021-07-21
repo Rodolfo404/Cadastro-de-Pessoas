@@ -11,13 +11,14 @@ namespace trabalho_em_duplaRodolfo
     class Menu
     {
 
-        public static List<int> contagem = new List<int>();
+        public static List<int> contagemIdPf = new List<int>();
+        public static List<int> contagemIdPj = new List<int>();
         public static List<PessoaFisica> pfs = new List<PessoaFisica>();
         public static List<PessoaJuridica> pjs = new List<PessoaJuridica>();
         public void Main()
         {
             Console.WriteLine("-------Bem vindo-------");
-            Console.WriteLine("0 - Sair\n1 - Cadastro pessoa Juridica\n2 - Cadastro pessoa fisica\n3 - Mostrar lista de pessoas juridicas\n4 - Mostrar lista de pessoas Físicas\n5 - Apagar pessoa fisica");
+            Console.WriteLine("1 - Cadastro pessoa Juridica\n2 - Cadastro pessoa fisica\n3 - Mostrar lista de pessoas juridicas\n4 - Mostrar lista de pessoas Físicas\n0 - Sair");
             Console.WriteLine("Escolha uma das opções acima: ");
             
         }

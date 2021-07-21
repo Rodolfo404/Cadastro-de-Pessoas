@@ -8,20 +8,35 @@ namespace trabalho_em_duplaRodolfo
 {
     public class Validacao
     {
-        public  int IID(int id)
+        public  int ValidaIdPf(int id)
         {
-                if (Menu.contagem.Count <= 0)
+                if (Menu.contagemIdPf.Count <= 0)
                 {
-                    id = Menu.contagem.Count + 1;
-                    Menu.contagem.Add(id);
+                    id = Menu.contagemIdPf.Count + 1;
+                    Menu.contagemIdPf.Add(id);
                     return id;
                 }
                 else
                 {
-                    id = Menu.contagem.Count + 1;
-                    Menu.contagem.Add(id);
+                    id = Menu.contagemIdPf.Count + 1;
+                    Menu.contagemIdPf.Add(id);
                     return id;
                 }
+        }
+        public int ValidaIdPj(int id)
+        {
+            if (Menu.contagemIdPj.Count <= 0)
+            {
+                id = Menu.contagemIdPj.Count + 1;
+                Menu.contagemIdPj.Add(id);
+                return id;
+            }
+            else
+            {
+                id = Menu.contagemIdPj.Count + 1;
+                Menu.contagemIdPj.Add(id);
+                return id;
+            }
         }
         public static string ValidaStringBranco()
         {
