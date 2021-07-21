@@ -23,10 +23,33 @@ namespace trabalho_em_duplaRodolfo.Models
             this.Num = num;
             this.Complemento = complemento;
         }
+        public Endereco()
+        {
+
+        }
         public override string ToString()
         {
             return $"\nEstado: {this.Estado}\nCidade: {this.Cidade}\n" +
                 $"Bairro: {this.Bairro}\nRua: {this.Rua}\nNúmero: {this.Num}\nComplemento: {this.Complemento}";
+        }
+
+        public Endereco Create()
+        {
+            Console.Write("-------Cadastro de endereço-------");
+            Console.Write("\nEstado: ");
+            string estado = Validacao.ValidaStringBranco();
+            Console.Write("Cidade:");
+            string cidade = Validacao.ValidaStringBranco();
+            Console.Write("Bairro: ");
+            string bairro = Validacao.ValidaStringBranco();
+            Console.Write("Rua: ");
+            string rua = Validacao.ValidaStringBranco();
+            Console.Write("Número:");
+            int num = Validacao.ValidaInt();
+            Console.Write("Complemento: ");
+            string complemento = Validacao.ValidaStringBranco();
+            Endereco endereco = new Endereco(estado, cidade, bairro, rua, num, complemento);
+            return endereco;
         }
     }
 }

@@ -121,11 +121,11 @@ namespace trabalho_em_duplaRodolfo
             new PessoaFisica().Read();
             Console.Write("digite um Id que queira deletar:");
             int id = int.Parse(Console.ReadLine());
-            foreach (var item in Menu.Pf)
+            foreach (var item in Menu.pfs)
             {
                 if (item.ID.Equals(id))
                 {
-                    Menu.Pf.Remove (item);
+                    Menu.pfs.Remove (item);
                     break;
                 }
             }

@@ -7,11 +7,13 @@ using trabalho_em_duplaRodolfo.Models;
 
 namespace trabalho_em_duplaRodolfo
 {
+    public delegate void TesteDelegate();
     class Menu
     {
+
         public static List<int> contagem = new List<int>();
-        public static List<PessoaFisica> Pf = new List<PessoaFisica>();
-        public static List<PessoaJuridica> Pj = new List<PessoaJuridica>();
+        public static List<PessoaFisica> pfs = new List<PessoaFisica>();
+        public static List<PessoaJuridica> pjs = new List<PessoaJuridica>();
         public void Main()
         {
             Console.WriteLine("-------Bem vindo-------");
@@ -26,24 +28,29 @@ namespace trabalho_em_duplaRodolfo
             {
                 Console.Clear();
                 Main();
-                resposta = Validacao.ValidaInt();
                 PessoaFisica pf = new PessoaFisica();
                 PessoaJuridica pj = new PessoaJuridica();
+                TesteDelegate tdel;
+                resposta = Validacao.ValidaInt();
                 switch (resposta)
                 {
                     case 0:
                         break;
                     case 1:
-                        pj.Create();
+                        tdel = pj.Create;
+                        tdel();
                         break;
                     case 2:
-                        pf.Create();
+                        tdel = pf.Create;
+                        tdel();
                         break;
                     case 3:
-                        pj.Read();
+                        tdel = pj.Read;
+                        tdel();
                         break;
                     case 4:
-                        pf.Read();
+                        tdel = pf.Read;
+                        tdel();
                         break;
                     case 5:
                         new Validacao().Remove();

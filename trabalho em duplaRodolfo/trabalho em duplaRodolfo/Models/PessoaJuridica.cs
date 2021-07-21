@@ -17,7 +17,7 @@ namespace trabalho_em_duplaRodolfo.Models
             this.createOperation = Create;
             this.readOperation = Read;
         }
-        public void Create()
+        void Create()
         {
             string resp;
             do
@@ -47,17 +47,17 @@ namespace trabalho_em_duplaRodolfo.Models
                 Console.Write("Complemento: ");
                 string complemento = Validacao.ValidaStringBranco();
                 cadastro.Endereco = new Endereco(estado, cidade, bairro, rua, num, complemento);
-                Menu.Pj.Add(cadastro);
+                Menu.pjs.Add(cadastro);
                 Console.WriteLine("Deseja realizar mais um cadastro? S/N");
                 resp = Console.ReadLine().ToLower();
             } while (resp == "s");
             Console.Clear();
         }
-        public void Read()
+        void Read()
         {
 
             Console.Clear();
-            if (Menu.Pj.Count <= 0)
+            if (Menu.pjs.Count <= 0)
             {
                 Console.Clear();
                 Console.WriteLine("\nLista de Pessoas Jurídicas vazia!");
@@ -67,7 +67,7 @@ namespace trabalho_em_duplaRodolfo.Models
             {
                 Console.Clear();
                 Console.WriteLine("\n------------- Lista de Pessoa Jurídica -------------");
-                foreach (var item in Menu.Pj)
+                foreach (var item in Menu.pjs)
                 {
                     Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("---------------------------------------------------");
                     Console.ResetColor();
