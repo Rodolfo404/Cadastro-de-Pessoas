@@ -6,12 +6,24 @@ using System.Threading.Tasks;
 
 namespace trabalho_em_duplaRodolfo.Models
 {
-    class PessoaJuridica : Pessoas
+    public class PessoaJuridica : Pessoas
     {
 
         public string Cnpj { get; set; }
         public string Ie { get; set; }
 
+        public PessoaJuridica(int id, string nome, string cnpj, string ie, DateTime dataNasc, Endereco endereco)
+        {
+            this.ID = id;
+            this.Nome = nome;
+            this.Cnpj = cnpj;
+            this.Ie = ie;
+            this.DataNascimento = dataNasc;
+            this.Endereco = endereco;
+
+            this.createOperation = Create;
+            this.readOperation = Read;
+        }
         public PessoaJuridica()
         {
             this.createOperation = Create;
@@ -34,7 +46,7 @@ namespace trabalho_em_duplaRodolfo.Models
                 cadastro.Nome = Validacao.ValidaStringBranco();
                 if (cadastro.Nome == "*")
                 {
-                    cadastro.ID = valida.ValidaIdPj(ID);
+                    cadastro.ID = valida.ValidaIdPj();
                     cadastro.Cnpj = "11111111111";
                     cadastro.Ie = "1111111";
                     cadastro.DataNascimento = DateTime.Now;
@@ -45,7 +57,7 @@ namespace trabalho_em_duplaRodolfo.Models
                 }
                 else
                 {
-                    cadastro.ID = valida.ValidaIdPj(ID);
+                    cadastro.ID = valida.ValidaIdPj();
                     Console.Write("digite seu Cnpj:");
                     cadastro.Cnpj = Validacao.ValidaStringBranco();
                     Console.Write("digite seu IE: ");

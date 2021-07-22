@@ -69,6 +69,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PessoaFisicaForm.resx">
+      <DependentUpon>PessoaFisicaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PessoaJuridicaForm.resx">
       <DependentUpon>PessoaJuridicaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\trabalho em duplaRodolfo\trabalho em duplaRodolfo.csproj">
+      <Project>{f651b00b-4bf0-4f5d-8c35-c3fd8b86cf4f}</Project>
+      <Name>trabalho em duplaRodolfo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

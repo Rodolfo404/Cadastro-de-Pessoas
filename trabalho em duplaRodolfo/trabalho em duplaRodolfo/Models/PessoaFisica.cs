@@ -16,6 +16,18 @@ namespace trabalho_em_duplaRodolfo.Models
             this.createOperation = Create;
             this.readOperation = Read;
         }
+        public PessoaFisica(int id, string nome, string cpf, string rg, DateTime dataNasc, Endereco endereco)
+        {
+            this.ID = id;
+            this.Nome = nome;
+            this.Cpf = cpf;
+            this.Rg = rg;
+            this.DataNascimento = dataNasc;
+            this.Endereco = endereco;
+
+            this.createOperation = Create;
+            this.readOperation = Read;
+        }
 
         public override string ToString()
         {
@@ -36,7 +48,7 @@ namespace trabalho_em_duplaRodolfo.Models
                 cadastro.Nome = Validacao.ValidaStringBranco();
                 if (cadastro.Nome == "*")
                 {
-                    cadastro.ID = valida.ValidaIdPf(ID);
+                    cadastro.ID = valida.ValidaIdPj();
                     cadastro.Cpf = "11111111111";
                     cadastro.Rg = "1111111";
                     cadastro.DataNascimento = DateTime.Now;
@@ -47,7 +59,7 @@ namespace trabalho_em_duplaRodolfo.Models
                 }
                 else
                 {
-                    cadastro.ID = valida.ValidaIdPf(ID);
+                    cadastro.ID = valida.ValidaIdPj();
                     Console.Write("CPF com 11 Digitos:");
                     cadastro.Cpf = Validacao.CPF();
                     Console.Write("RG com 7 Digitos: ");

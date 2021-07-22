@@ -8,8 +8,9 @@ namespace trabalho_em_duplaRodolfo
 {
     public class Validacao
     {
-        public  int ValidaIdPf(int id)
+        public  int ValidaIdPf()
         {
+            int id = 0;
                 if (Menu.contagemIdPf.Count <= 0)
                 {
                     id = Menu.contagemIdPf.Count + 1;
@@ -23,8 +24,9 @@ namespace trabalho_em_duplaRodolfo
                     return id;
                 }
         }
-        public int ValidaIdPj(int id)
+        public int ValidaIdPj()
         {
+            int id = 0;
             if (Menu.contagemIdPj.Count <= 0)
             {
                 id = Menu.contagemIdPj.Count + 1;
