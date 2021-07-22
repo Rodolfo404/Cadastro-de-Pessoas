@@ -29,6 +29,7 @@ namespace CadastroPessoasFrom
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PessoaJuridicaForm));
             this.lbPJ = new System.Windows.Forms.Label();
             this.lbNomePJ = new System.Windows.Forms.Label();
             this.txbNomePj = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@ namespace CadastroPessoasFrom
             this.label10 = new System.Windows.Forms.Label();
             this.txbDatePj = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnVoltarPj = new System.Windows.Forms.Button();
             this.btnSalvarPj = new System.Windows.Forms.Button();
             this.dgPj = new System.Windows.Forms.DataGridView();
             this.clbtneditpf = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -66,13 +66,17 @@ namespace CadastroPessoasFrom
             this.clruapf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnumpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clcomppf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPj)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbPJ
             // 
             this.lbPJ.AutoSize = true;
+            this.lbPJ.BackColor = System.Drawing.Color.Black;
             this.lbPJ.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPJ.ForeColor = System.Drawing.Color.White;
             this.lbPJ.Location = new System.Drawing.Point(245, 9);
             this.lbPJ.Name = "lbPJ";
             this.lbPJ.Size = new System.Drawing.Size(233, 41);
@@ -252,15 +256,6 @@ namespace CadastroPessoasFrom
             this.label1.TabIndex = 22;
             this.label1.Text = "Endereço";
             // 
-            // btnVoltarPj
-            // 
-            this.btnVoltarPj.Location = new System.Drawing.Point(15, 415);
-            this.btnVoltarPj.Name = "btnVoltarPj";
-            this.btnVoltarPj.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarPj.TabIndex = 24;
-            this.btnVoltarPj.Text = "Voltar";
-            this.btnVoltarPj.UseVisualStyleBackColor = true;
-            // 
             // btnSalvarPj
             // 
             this.btnSalvarPj.Location = new System.Drawing.Point(194, 415);
@@ -358,6 +353,20 @@ namespace CadastroPessoasFrom
             this.clcomppf.HeaderText = "Complemento";
             this.clcomppf.Name = "clcomppf";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(745, 456);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
             // PessoaJuridicaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,7 +374,6 @@ namespace CadastroPessoasFrom
             this.ClientSize = new System.Drawing.Size(739, 450);
             this.Controls.Add(this.dgPj);
             this.Controls.Add(this.btnSalvarPj);
-            this.Controls.Add(this.btnVoltarPj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbDatePj);
             this.Controls.Add(this.txbCompPj);
@@ -388,9 +396,11 @@ namespace CadastroPessoasFrom
             this.Controls.Add(this.txbNomePj);
             this.Controls.Add(this.lbNomePJ);
             this.Controls.Add(this.lbPJ);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "PessoaJuridicaForm";
-            this.Text = "PessoaJuridicaForm";
+            this.Text = "Cadastro de pessoas";
             ((System.ComponentModel.ISupportInitialize)(this.dgPj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,7 +430,6 @@ namespace CadastroPessoasFrom
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker txbDatePj;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnVoltarPj;
         private System.Windows.Forms.Button btnSalvarPj;
         private System.Windows.Forms.DataGridView dgPj;
         private System.Windows.Forms.DataGridViewButtonColumn clbtneditpf;
@@ -435,5 +444,6 @@ namespace CadastroPessoasFrom
         private System.Windows.Forms.DataGridViewTextBoxColumn clruapf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnumpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clcomppf;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

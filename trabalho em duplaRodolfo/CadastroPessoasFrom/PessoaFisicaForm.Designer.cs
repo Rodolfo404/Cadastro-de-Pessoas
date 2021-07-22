@@ -29,8 +29,8 @@ namespace CadastroPessoasFrom
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PessoaFisicaForm));
             this.btnSalvarPf = new System.Windows.Forms.Button();
-            this.btnVoltarPf = new System.Windows.Forms.Button();
             this.dgPf = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txbDatePf = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +66,9 @@ namespace CadastroPessoasFrom
             this.clruapf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnumpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clcomppf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvarPf
@@ -78,15 +80,6 @@ namespace CadastroPessoasFrom
             this.btnSalvarPf.Text = "Salvar";
             this.btnSalvarPf.UseVisualStyleBackColor = true;
             this.btnSalvarPf.Click += new System.EventHandler(this.EventoSalvarPf);
-            // 
-            // btnVoltarPf
-            // 
-            this.btnVoltarPf.Location = new System.Drawing.Point(21, 415);
-            this.btnVoltarPf.Name = "btnVoltarPf";
-            this.btnVoltarPf.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarPf.TabIndex = 48;
-            this.btnVoltarPf.Text = "Voltar";
-            this.btnVoltarPf.UseVisualStyleBackColor = true;
             // 
             // dgPf
             // 
@@ -285,7 +278,9 @@ namespace CadastroPessoasFrom
             // lbPJ
             // 
             this.lbPJ.AutoSize = true;
+            this.lbPJ.BackColor = System.Drawing.Color.Black;
             this.lbPJ.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPJ.ForeColor = System.Drawing.Color.White;
             this.lbPJ.Location = new System.Drawing.Point(259, 9);
             this.lbPJ.Name = "lbPJ";
             this.lbPJ.Size = new System.Drawing.Size(200, 41);
@@ -296,76 +291,78 @@ namespace CadastroPessoasFrom
             // 
             this.clbtneditpf.HeaderText = "Editar";
             this.clbtneditpf.Name = "clbtneditpf";
-            this.clbtneditpf.ReadOnly = true;
             this.clbtneditpf.Width = 50;
             // 
             // clbtndelete
             // 
             this.clbtndelete.HeaderText = "Delete";
             this.clbtndelete.Name = "clbtndelete";
-            this.clbtndelete.ReadOnly = true;
             this.clbtndelete.Width = 50;
             // 
             // clidpf
             // 
             this.clidpf.HeaderText = "Id";
             this.clidpf.Name = "clidpf";
-            this.clidpf.ReadOnly = true;
             this.clidpf.Width = 50;
             // 
             // clnomepf
             // 
             this.clnomepf.HeaderText = "Nome";
             this.clnomepf.Name = "clnomepf";
-            this.clnomepf.ReadOnly = true;
             // 
             // clcpf
             // 
             this.clcpf.HeaderText = "CPF";
             this.clcpf.Name = "clcpf";
-            this.clcpf.ReadOnly = true;
             // 
             // clrg
             // 
             this.clrg.HeaderText = "RG";
             this.clrg.Name = "clrg";
-            this.clrg.ReadOnly = true;
             // 
             // clestadopf
             // 
             this.clestadopf.HeaderText = "Estado";
             this.clestadopf.Name = "clestadopf";
-            this.clestadopf.ReadOnly = true;
             // 
             // clcidadepf
             // 
             this.clcidadepf.HeaderText = "Cidade";
             this.clcidadepf.Name = "clcidadepf";
-            this.clcidadepf.ReadOnly = true;
             // 
             // clbairropf
             // 
             this.clbairropf.HeaderText = "Bairro";
             this.clbairropf.Name = "clbairropf";
-            this.clbairropf.ReadOnly = true;
             // 
             // clruapf
             // 
             this.clruapf.HeaderText = "Rua";
             this.clruapf.Name = "clruapf";
-            this.clruapf.ReadOnly = true;
             // 
             // clnumpf
             // 
             this.clnumpf.HeaderText = "Numero";
             this.clnumpf.Name = "clnumpf";
-            this.clnumpf.ReadOnly = true;
             // 
             // clcomppf
             // 
             this.clcomppf.HeaderText = "Complemento";
             this.clcomppf.Name = "clcomppf";
-            this.clcomppf.ReadOnly = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(755, 456);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 50;
+            this.pictureBox1.TabStop = false;
             // 
             // PessoaFisicaForm
             // 
@@ -373,7 +370,6 @@ namespace CadastroPessoasFrom
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 450);
             this.Controls.Add(this.btnSalvarPf);
-            this.Controls.Add(this.btnVoltarPf);
             this.Controls.Add(this.dgPf);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbDatePf);
@@ -397,9 +393,11 @@ namespace CadastroPessoasFrom
             this.Controls.Add(this.txbNomePf);
             this.Controls.Add(this.lbNomePJ);
             this.Controls.Add(this.lbPJ);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "PessoaFisicaForm";
-            this.Text = "PessoaFisicaForm";
+            this.Text = "Cadastro de pessoas";
             ((System.ComponentModel.ISupportInitialize)(this.dgPf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,7 +406,6 @@ namespace CadastroPessoasFrom
         #endregion
 
         private System.Windows.Forms.Button btnSalvarPf;
-        private System.Windows.Forms.Button btnVoltarPf;
         private System.Windows.Forms.DataGridView dgPf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker txbDatePf;
@@ -444,5 +441,6 @@ namespace CadastroPessoasFrom
         private System.Windows.Forms.DataGridViewTextBoxColumn clruapf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnumpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clcomppf;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
